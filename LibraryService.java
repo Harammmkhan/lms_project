@@ -6,6 +6,9 @@ public class LibraryService {
      */
     public static int issueBook(int availableCopies, String title)
             throws BookUnavailableException {
+                if (title == null || title.trim().isEmpty()) {
+    throw new IllegalArgumentException("Book title cannot be empty.");
+}
 
         if (availableCopies <= 0) {
             throw new BookUnavailableException(
