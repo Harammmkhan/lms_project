@@ -29,4 +29,12 @@ public class LibraryService {
             System.out.println("Transaction failed: " + e.getMessage());
         }
     }
+    public static boolean findMemberById(int[] memberIds, int targetId) {
+    for (int id : memberIds) {
+        if (id == targetId) {
+            return true;
+        }
+    }
+    return false;
+}
 }
