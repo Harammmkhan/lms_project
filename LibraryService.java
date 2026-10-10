@@ -32,13 +32,14 @@ public class LibraryService {
             System.out.println("Transaction failed: " + e.getMessage());
         }
     }
-        /**
-     * Checks whether a member ID exists in the array.
-     *
-     * @param memberIds the array of member IDs
-     * @param targetId the ID to search for
-     * @return true if the ID exists; otherwise, false
-     */
+   /**
+ * Checks whether a member ID exists in the array.
+ * This method returns true when a matching ID is found.
+ *
+ * @param memberIds the array of member IDs
+ * @param targetId the ID to search for
+ * @return true if the ID exists; otherwise, false
+ */
     public static boolean findMemberById(int[] memberIds, int targetId) {
     for (int id : memberIds) {
         if (id == targetId) {
